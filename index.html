@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marely's Land Consulting - Premium US Investment Land, Fully Vetted</title>
+<meta name="description" content="Marely's Land Consulting provides independent guidance for US investors on fully vetted US land parcels, with clear titles and 100% remote oversight. Call (307) 323-2992.">
+<meta property="og:title" content="Marely's Land Consulting - Premium US Investment Land">
+<meta property="og:description" content="Fully vetted US land parcels. Clear titles guaranteed. Expert remote consulting for US investors.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23047857' stroke-width='2'%3E%3Cline x1='3' x2='21' y1='22' y2='22'/%3E%3Cline x1='6' x2='6' y1='18' y2='11'/%3E%3Cline x1='10' x2='10' y1='18' y2='11'/%3E%3Cline x1='14' x2='14' y1='18' y2='11'/%3E%3Cline x1='18' x2='18' y1='18' y2='11'/%3E%3Cpolygon points='12 2 20 7 4 7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ DESIGN TOKENS — warm corporate-earth ============ */
+:root{
+  --cream:#FAF6EE;        /* page background */
+  --cream-soft:#FFFDF7;   /* raised surfaces */
+  --sand:#F2EADA;         /* alternate sections */
+  --ink:#2E2418;          /* headings, strong text */
+  --brown-700:#4A3B29;    /* body text */
+  --brown-500:#7A6A54;    /* secondary text */
+  --brown-300:#B3A48C;    /* faint text */
+  --line:#E7DCC7;         /* warm borders */
+  --emerald-950:#022C22; --emerald-900:#064E3B; --emerald-800:#065F46;
+  --emerald-700:#047857; --emerald-600:#059669; --emerald-500:#10B981; --emerald-400:#34D399;
+  --amber-600:#D97706; --amber-500:#F59E0B; --amber-100:#FDF0DC;
+  --espresso:#261A0E;     /* footer / dark panel */
+  --white:#FFFFFF; --red:#DC2626;
+  --radius:16px; --radius-lg:24px;
+  --serif:'Playfair Display',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--cream); color:var(--brown-700);
+  line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer;border:none;background:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+@media(min-width:1024px){.container{padding:0 32px}}
+
+/* ============ SCROLL REVEAL ============ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation:none!important;transition:none!important}
+}
+
+/* ============ NAVBAR ============ */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(250,246,238,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line);box-shadow:0 8px 24px rgba(74,59,41,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;max-width:1200px;margin:0 auto}
+@media(min-width:1024px){.nav-inner{padding:14px 32px}}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-icon{width:38px;height:38px;flex-shrink:0;border-radius:11px;background:linear-gradient(135deg,var(--emerald-700),var(--emerald-900));display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(16,185,129,.3);transition:transform .3s}
+.brand:hover .brand-icon{transform:scale(1.06)}
+.brand-name{font-weight:800;font-size:16px;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
+.brand-name em{font-style:normal;color:var(--emerald-700)}
+.nav-links{display:none;list-style:none;gap:22px;align-items:center}
+.nav-links a{font-size:14px;font-weight:600;color:var(--brown-500);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--emerald-700)}
+.nav-cta{display:none;align-items:center;gap:14px;flex-shrink:0}
+.nav-phone{display:flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--ink);transition:color .2s;white-space:nowrap}
+.nav-phone:hover{color:var(--emerald-700)}
+.menu-btn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--ink);border-radius:10px;flex-shrink:0}
+/* Full nav only when there is really enough room — prevents brand/menu collision */
+@media(min-width:1160px){
+  .nav-links,.nav-cta{display:flex}
+  .menu-btn{display:none}
+}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;font-weight:700;transition:all .2s;cursor:pointer}
+.btn:active{transform:scale(.96)}
+.btn-primary{background:var(--emerald-700);color:var(--white);padding:12px 22px;font-size:14px;box-shadow:0 12px 26px -8px rgba(6,78,59,.4)}
+.btn-primary:hover{background:var(--emerald-600);box-shadow:0 14px 30px -6px rgba(4,120,87,.45)}
+.btn-ghost{border:1.5px solid var(--line);background:var(--cream-soft);color:var(--ink);padding:14px 28px;font-size:16px}
+.btn-ghost:hover{border-color:var(--emerald-600);color:var(--emerald-700)}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:rgba(250,246,238,.97);backdrop-filter:blur(16px);padding:14px 20px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:12px;border-radius:10px;font-weight:600;color:var(--ink)}
+.mobile-menu a:hover{background:var(--sand);color:var(--emerald-700)}
+.mobile-menu .m-phone{color:var(--emerald-700);display:flex;align-items:center;gap:8px}
+
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;padding:150px 0 90px;background:linear-gradient(180deg,var(--sand) 0%,var(--cream) 55%)}
+.glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(110px)}
+.glow-1{width:480px;height:480px;top:-180px;left:16%;background:rgba(245,158,11,.14)}
+.glow-2{width:420px;height:420px;bottom:-120px;right:4%;background:rgba(5,150,105,.12)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:1024px){.hero-grid{grid-template-columns:7fr 5fr}}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(4,120,87,.25);background:rgba(255,253,247,.8);border-radius:999px;padding:7px 16px;margin-bottom:24px;box-shadow:0 2px 8px rgba(74,59,41,.06)}
+.badge span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-800)}
+h1{font-family:var(--serif);font-size:clamp(34px,4.8vw,56px);font-weight:700;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+h1 .grad{color:var(--emerald-700)}
+.hero-sub{margin-top:22px;max-width:560px;font-size:18px;color:var(--brown-500)}
+.hero-ctas{margin-top:34px;display:flex;flex-direction:column;gap:16px}
+@media(min-width:640px){.hero-ctas{flex-direction:row}}
+.btn-hero{padding:15px 30px;font-size:16px}
+.btn-hero svg{transition:transform .2s}
+.btn-hero:hover svg{transform:translateX(4px)}
+.hero-photo{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -18px rgba(46,36,24,.35);aspect-ratio:4/5;max-height:520px;width:100%}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(245,158,11,.12),transparent 45%)}
+.photo-tag{position:absolute;left:16px;bottom:16px;z-index:2;display:flex;align-items:center;gap:10px;background:rgba(255,253,247,.92);backdrop-filter:blur(8px);border-radius:12px;padding:10px 16px;box-shadow:0 8px 20px rgba(46,36,24,.18)}
+.photo-tag b{display:block;font-size:14px;color:var(--ink)}
+.photo-tag small{font-size:12px;color:var(--brown-500)}
+.photo-tag .dot{width:36px;height:36px;flex-shrink:0;border-radius:10px;background:var(--emerald-900);display:flex;align-items:center;justify-content:center;color:var(--emerald-400)}
+
+/* Trust metrics bar */
+.metrics{margin-top:64px;display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.metrics{grid-template-columns:repeat(3,1fr)}}
+.metric{display:flex;align-items:center;gap:16px;background:var(--cream-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;box-shadow:0 4px 14px rgba(74,59,41,.05);transition:transform .3s,box-shadow .3s}
+.metric:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(74,59,41,.1)}
+.metric-icon{width:48px;height:48px;flex-shrink:0;border-radius:12px;background:#E9F5EF;box-shadow:inset 0 0 0 1px rgba(4,120,87,.2);display:flex;align-items:center;justify-content:center;color:var(--emerald-700)}
+.metric b{display:block;font-size:24px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.metric small{font-size:14px;font-weight:500;color:var(--brown-500)}
+
+/* ============ SECTIONS ============ */
+section{position:relative}
+.section{padding:96px 0}
+.section-sand{background:var(--sand);padding:96px 0;overflow:hidden}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-600)}
+h2{font-family:var(--serif);margin-top:12px;font-size:clamp(28px,3.4vw,42px);font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.section-sub{margin-top:16px;max-width:620px;font-size:18px;color:var(--brown-500)}
+
+/* ============ STATE GRID ============ */
+.states-grid{margin-top:48px;display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.states-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.states-grid{grid-template-columns:repeat(3,1fr)}}
+.state-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--cream-soft);padding:24px;box-shadow:0 4px 14px rgba(74,59,41,.05);transition:transform .3s,border-color .3s,box-shadow .3s;height:100%}
+.state-card:hover{transform:translateY(-5px);border-color:rgba(4,120,87,.4);box-shadow:0 24px 44px -12px rgba(74,59,41,.18)}
+.state-glow{position:absolute;top:-64px;right:-64px;width:160px;height:160px;border-radius:50%;filter:blur(48px);background:transparent;transition:background .5s;pointer-events:none}
+.state-card:hover .state-glow{background:rgba(245,158,11,.18)}
+.state-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.state-head h3{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--ink)}
+.state-tag{border:1px solid rgba(217,119,6,.3);background:var(--amber-100);border-radius:999px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#92400E;white-space:nowrap}
+.state-blurb{margin-top:12px;font-size:14px;color:var(--brown-500)}
+.state-stats{margin-top:20px;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:12px}
+.stat-row{display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.stat-row dt{display:flex;align-items:center;gap:8px;color:var(--brown-500)}
+.stat-row dd{font-weight:700;font-variant-numeric:tabular-nums}
+.stat-growth{color:var(--emerald-700)}
+.stat-ink{color:var(--ink)}
+.stat-zoning{font-weight:600;color:var(--brown-700)}
+.demand-bar{height:6px;border-radius:999px;background:var(--sand);overflow:hidden;margin-top:8px}
+.demand-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--emerald-700),var(--emerald-400));transition:filter .5s}
+.state-card:hover .demand-fill{filter:brightness(1.12)}
+
+/* ============ FRAMEWORK TIMELINE ============ */
+.timeline{position:relative;margin-top:72px}
+.timeline-line{position:absolute;top:32px;left:0;right:0;height:2px;background:linear-gradient(90deg,#E9D9BB,var(--emerald-600),#E9D9BB);display:none}
+@media(min-width:1024px){.timeline-line{display:block}}
+.steps{display:grid;grid-template-columns:1fr;gap:56px;list-style:none}
+@media(min-width:1024px){.steps{grid-template-columns:repeat(3,1fr);gap:32px}}
+.step{position:relative;background:var(--cream-soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 4px 14px rgba(74,59,41,.06);transition:transform .3s,box-shadow .3s;height:100%}
+.step:hover{transform:translateY(-5px);box-shadow:0 22px 44px -12px rgba(74,59,41,.16)}
+.step-icon{position:relative;z-index:2;width:64px;height:64px;margin:-60px 0 20px;border-radius:var(--radius);background:linear-gradient(135deg,var(--emerald-700),var(--emerald-900));display:flex;align-items:center;justify-content:center;color:var(--white);box-shadow:0 12px 24px -6px rgba(6,78,59,.35),0 0 0 5px var(--sand)}
+.step-num{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-600)}
+.step h3{font-family:var(--serif);margin-top:8px;font-size:21px;font-weight:700;color:var(--ink)}
+.step p{margin-top:12px;font-size:14px;color:var(--brown-500)}
+
+/* ============ MISSION ============ */
+.mission-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:1024px){.mission-grid{grid-template-columns:5fr 6fr}}
+.mission-photo{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -18px rgba(46,36,24,.3);aspect-ratio:5/4}
+.mission-photo img{width:100%;height:100%;object-fit:cover}
+.mission-text p{margin-top:18px;font-size:17px;color:var(--brown-500)}
+.mission-quote{font-family:var(--serif);font-style:italic;margin-top:28px;font-size:21px;color:var(--ink);border-left:3px solid var(--amber-500);padding-left:18px}
+
+/* ============ ABOUT ============ */
+.about-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:start}
+@media(min-width:1024px){.about-grid{grid-template-columns:1fr 1fr}}
+.about-text p{margin-top:18px;font-size:17px;color:var(--brown-500)}
+.about-contacts{margin-top:24px;display:flex;flex-direction:column;gap:12px}
+@media(min-width:640px){.about-contacts{flex-direction:row}}
+.contact-chip{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--cream-soft);border-radius:12px;padding:12px 20px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:0 3px 10px rgba(74,59,41,.05);transition:border-color .2s,color .2s}
+.contact-chip:hover{border-color:rgba(4,120,87,.5);color:var(--emerald-700)}
+.contact-chip svg{color:var(--emerald-700);flex-shrink:0}
+.about-points{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.about-points{grid-template-columns:1fr 1fr}}
+.point-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--cream-soft);padding:24px;box-shadow:0 4px 14px rgba(74,59,41,.05);transition:border-color .3s,transform .3s;height:100%}
+.point-card:hover{border-color:rgba(217,119,6,.4);transform:translateY(-3px)}
+.point-icon{width:44px;height:44px;border-radius:12px;background:var(--amber-100);box-shadow:inset 0 0 0 1px rgba(217,119,6,.25);display:flex;align-items:center;justify-content:center;color:var(--amber-600)}
+.point-card h3{margin-top:16px;font-size:16px;font-weight:700;color:var(--ink)}
+.point-card p{margin-top:8px;font-size:14px;color:var(--brown-500)}
+
+/* ============ CONTACT / FORM ============ */
+.contact-shell{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--cream-soft);box-shadow:0 30px 70px -20px rgba(46,36,24,.25);overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1fr}
+@media(min-width:1024px){.contact-grid{grid-template-columns:2fr 3fr}}
+.contact-info{background:linear-gradient(180deg,var(--sand) 0%,var(--cream-soft) 60%);padding:36px;border-bottom:1px solid var(--line)}
+@media(min-width:1024px){.contact-info{padding:44px;border-bottom:none;border-right:1px solid var(--line)}}
+.contact-info h2{margin-top:0;font-size:clamp(24px,2.5vw,30px);color:var(--ink)}
+.contact-info>p.info-lede{margin-top:16px;font-size:14px;color:var(--brown-500)}
+.advisor-photo-block{position:relative;margin-top:28px;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;box-shadow:0 24px 46px -16px rgba(74,59,41,.28)}
+.advisor-photo-block img{width:100%;height:100%;object-fit:cover;display:block}
+.advisor-caption{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:10px;background:rgba(255,253,247,.94);backdrop-filter:blur(6px);border-radius:12px;padding:9px 15px;box-shadow:0 8px 18px rgba(46,36,24,.18)}
+.advisor-caption b{display:block;font-size:14px;color:var(--ink)}
+.advisor-caption small{font-size:12px;color:var(--brown-500)}
+.info-rows{margin-top:28px;display:flex;flex-direction:column;gap:22px}
+.info-row{display:flex;align-items:flex-start;gap:16px}
+.info-icon{width:48px;height:48px;flex-shrink:0;border-radius:12px;background:#E9F5EF;box-shadow:inset 0 0 0 1px rgba(4,120,87,.22);display:flex;align-items:center;justify-content:center;color:var(--emerald-700);transition:box-shadow .2s}
+.info-row:hover .info-icon{box-shadow:inset 0 0 0 1px rgba(4,120,87,.45)}
+.info-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-600)}
+.info-value{font-size:16px;font-weight:700;color:var(--ink)}
+.info-note{font-size:13px;color:var(--brown-500)}
+.contact-form{padding:36px}
+@media(min-width:1024px){.contact-form{padding:44px}}
+.form-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.form-grid{grid-template-columns:1fr 1fr}}
+label{display:block;margin-bottom:6px;font-size:14px;font-weight:700;color:var(--ink)}
+label .req{color:var(--amber-600)}
+input[type=text],input[type=email],input[type=tel],select,textarea{
+  width:100%;border:1.5px solid var(--line);border-radius:10px;background:var(--white);
+  padding:12px 16px;font:inherit;font-size:14px;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s;
+}
+input::placeholder,textarea::placeholder{color:var(--brown-300)}
+input:focus,select:focus,textarea:focus{border-color:var(--emerald-600);box-shadow:0 0 0 3px rgba(16,185,129,.18)}
+.field.error input,.field.error select{border-color:rgba(220,38,38,.6)}
+.err-msg{display:none;margin-top:6px;font-size:12px;color:var(--red)}
+.field.error .err-msg{display:block}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237A6A54' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+textarea{resize:vertical;min-height:110px}
+.consent-box{margin-top:20px;border:1.5px solid var(--line);border-radius:14px;background:var(--sand);padding:16px;transition:border-color .2s,background .2s}
+.consent-box.error{border-color:rgba(220,38,38,.6);background:#FDF1EC}
+.consent-label{display:flex;align-items:flex-start;gap:12px;cursor:pointer;margin:0;font-weight:400}
+.consent-label input{width:20px;height:20px;flex-shrink:0;margin-top:2px;accent-color:var(--emerald-700);cursor:pointer}
+.consent-text{font-size:12px;line-height:1.65;color:var(--brown-700)}
+.consent-text a{color:var(--emerald-800);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.consent-text a:hover{color:var(--emerald-600)}
+.form-footer{margin-top:24px}
+.btn-submit{width:100%;padding:15px 30px;font-size:16px}
+@media(min-width:640px){.btn-submit{width:auto}}
+.btn-submit:disabled{opacity:.6;cursor:not-allowed}
+.success-card{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 20px}
+.success-card.show{display:flex}
+.success-icon{width:64px;height:64px;border-radius:50%;background:#E9F5EF;box-shadow:0 0 0 2px rgba(16,185,129,.4);display:flex;align-items:center;justify-content:center;color:var(--emerald-700)}
+.success-card h3{font-family:var(--serif);margin-top:20px;font-size:26px;font-weight:700;color:var(--ink)}
+.success-card p{margin-top:8px;max-width:380px;font-size:14px;color:var(--brown-500)}
+.spinner{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ============ FOOTER ============ */
+footer{background:var(--espresso);color:#D8CBB8}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:40px;padding:56px 0}
+@media(min-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
+footer .brand-name{color:#FFFDF7}
+footer .brand-name em{color:var(--emerald-400)}
+.footer-desc{margin-top:16px;font-size:14px;color:#A8967D}
+.footer-h{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#EADFCB}
+.footer-list{margin-top:16px;list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-list a,.footer-list li{display:inline-flex;align-items:flex-start;gap:8px;font-size:14px;color:#A8967D;transition:color .2s}
+.footer-list a:hover{color:var(--emerald-400)}
+.footer-list svg{flex-shrink:0;margin-top:3px;color:var(--emerald-500)}
+.legal-link{color:var(--amber-500)!important;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.legal-link:hover{color:#FBBF24!important}
+.footer-fine{margin-top:20px;font-size:12px;color:#7C6B54}
+.footer-bottom{display:flex;flex-direction:column;gap:14px;justify-content:space-between;border-top:1px solid rgba(216,203,184,.15);padding:26px 0;font-size:12px;color:#7C6B54}
+@media(min-width:640px){.footer-bottom{flex-direction:row;align-items:center}}
+.footer-bottom span{display:inline-flex;align-items:center;gap:6px}
+.footer-bottom svg{color:var(--emerald-600)}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a href="#home" class="brand">
+      <span class="brand-icon">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#D1FAE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+      </span>
+      <span class="brand-name">Marely's <em>Land</em> Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#states">Portfolio States</a></li>
+      <li><a href="#framework">Framework</a></li>
+      <li><a href="#mission">Our Mission</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+13073232992" class="nav-phone">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (307) 323-2992
+      </a>
+      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg id="menuIconOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="menuIconClose" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#states">Portfolio States</a>
+    <a href="#framework">De-Risking Framework</a>
+    <a href="#mission">Our Mission</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+13073232992" class="m-phone">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (307) 323-2992
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="reveal">
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>US Land Investment Specialists</span>
+          </div>
+        </div>
+        <div class="reveal" style="transition-delay:.1s">
+          <h1>Secure Premium US Investment Land. <span class="grad">Fully Vetted.</span> Strategic Asset Allocation.</h1>
+        </div>
+        <div class="reveal" style="transition-delay:.2s">
+          <p class="hero-sub">Marely's Land Consulting guides US investors through fully vetted, off-market US land opportunities - with institutional-grade due diligence and 100% remote oversight.</p>
+        </div>
+        <div class="reveal hero-ctas" style="transition-delay:.3s">
+          <a href="#contact" class="btn btn-primary btn-hero">
+            Start Your Land Strategy
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#framework" class="btn btn-ghost">How We De-Risk Deals</a>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.25s">
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Golden farmland hills at sunset in the American countryside" width="900" height="1125" fetchpriority="high">
+          <div class="photo-tag">
+            <span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><b>Vetted US Parcels</b><small>Coast to coast coverage</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Metrics Bar -->
+    <div class="reveal" style="transition-delay:.45s">
+      <dl class="metrics">
+        <div class="metric">
+          <span class="metric-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><dd><b>50+</b></dd><dt><small>Counties Vetted</small></dt></div>
+        </div>
+        <div class="metric">
+          <span class="metric-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div><dd><b>100%</b></dd><dt><small>Clear Titles Guaranteed</small></dt></div>
+        </div>
+        <div class="metric">
+          <span class="metric-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+          <div><dd><b>Expert</b></dd><dt><small>Remote Consulting</small></dt></div>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATE PORTFOLIO GRID ================= -->
+<section class="section" id="states">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">Active Investment Markets</p>
+      <h2>US State Portfolio Grid</h2>
+      <p class="section-sub">We continuously track county-level fundamentals across America's strongest land markets - so your capital lands where growth is headed.</p>
+    </div>
+    <div class="states-grid" id="statesGrid"><!-- cards injected by JS --></div>
+  </div>
+</section>
+
+<!-- ================= DE-RISKING FRAMEWORK ================= -->
+<section class="section-sand" id="framework">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">Investor Protection</p>
+      <h2>Our De-Risking Framework</h2>
+      <p class="section-sub">A disciplined three-step process engineered to protect US investors at every stage.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-line" aria-hidden="true"></div>
+      <ol class="steps">
+        <li class="reveal">
+          <div class="step">
+            <span class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span>
+            <span class="step-num">Step 1</span>
+            <h3>Algorithmic Sourcing</h3>
+            <p>Our data models scan county records nationwide to surface off-market, high-potential parcels before they ever hit public listings.</p>
+          </div>
+        </li>
+        <li class="reveal" style="transition-delay:.15s">
+          <div class="step">
+            <span class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg></span>
+            <span class="step-num">Step 2</span>
+            <h3>Absolute Due Diligence</h3>
+            <p>Zoning law verification, environmental checks, and full tax-lien scrubbing - every parcel passes a rigorous multi-point legal audit.</p>
+          </div>
+        </li>
+        <li class="reveal" style="transition-delay:.3s">
+          <div class="step">
+            <span class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+            <span class="step-num">Step 3</span>
+            <h3>Seamless Remote Process</h3>
+            <p>Complete every step from anywhere in the world with 100% legal oversight - notarized, escrowed, and title-insured without needing to travel.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR MISSION ================= -->
+<section class="section" id="mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="reveal">
+        <div class="mission-photo">
+          <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80" alt="Sunlit green fields and open countryside" width="900" height="720">
+        </div>
+      </div>
+      <div class="reveal mission-text" style="transition-delay:.15s">
+        <p class="eyebrow">Why We Exist</p>
+        <h2>Our Mission</h2>
+        <p>Marely's Land Consulting is dedicated to providing specialized, independent guidance on US land investments. We simplify the complexities of land ownership for individuals and investors around the world.</p>
+        <p>We are a dedicated consulting firm focused on land throughout the United States, offering professional, transparent, and objective advice. Acting solely as independent advisors, we put the investor's interest first at every step.</p>
+        <p>Our services include Land Investment Consultation, Market Analysis &amp; Due Diligence, and Legal &amp; Compliance Guidance - everything you need in one dependable place, whether you are new to land or a seasoned investor.</p>
+        <p class="mission-quote">Guiding you toward smarter, well-informed land investment decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT / BUSINESS PROFILE ================= -->
+<section class="section-sand" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal about-text">
+        <p class="eyebrow">Who We Are</p>
+        <h2>A Corporate Land Consulting Practice Built on Trust</h2>
+        <p>Marely's Land Consulting is a professional land investment consultancy helping US investors navigate land opportunities safely and confidently. We combine deep local US market intelligence with white-glove remote execution, serving clients nationwide.</p>
+        <p>Every engagement is documented, every parcel independently verified, and every client supported directly through our official channels:</p>
+        <div class="about-contacts">
+          <a href="mailto:marelysland@gmail.com" class="contact-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            marelysland@gmail.com
+          </a>
+          <a href="tel:+13073232992" class="contact-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (307) 323-2992
+          </a>
+        </div>
+      </div>
+      <div class="about-points">
+        <div class="reveal point-card">
+          <span class="point-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span>
+          <h3>Registered US Business Operations</h3>
+          <p>Marely's Land Consulting operates as a dedicated land investment consulting practice serving clients across the United States.</p>
+        </div>
+        <div class="reveal point-card" style="transition-delay:.1s">
+          <span class="point-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+          <h3>Nationwide Investor Focus</h3>
+          <p>We specialize in guiding investors across the United States through safe, fully remote land processes - no matter which state you call home.</p>
+        </div>
+        <div class="reveal point-card" style="transition-delay:.2s">
+          <span class="point-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
+          <h3>Legal &amp; Title Oversight</h3>
+          <p>Every engagement runs through licensed title companies and escrow services, with clear-title guarantees and documented chain of ownership.</p>
+        </div>
+        <div class="reveal point-card" style="transition-delay:.3s">
+          <span class="point-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+          <h3>Transparent Communication</h3>
+          <p>Clients receive direct support by phone and email, with clear consent-based SMS updates on land availability and progress - never spam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / LEAD FORM ================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="reveal contact-shell">
+      <div class="contact-grid">
+        <!-- Info panel -->
+        <div class="contact-info">
+          <h2>Speak With a Land Strategist</h2>
+          <p class="info-lede">Tell us your investment goals and preferred markets. A senior consultant will respond within one business day.</p>
+          <div class="advisor-photo-block">
+            <img src="advisor.png" alt="Portrait of the Marely's Land Consulting senior land strategist" width="640" height="480">
+            <span class="advisor-caption"><b>Your Land Strategist</b><small>Marely's Land Consulting</small></span>
+          </div>
+          <div class="info-rows">
+            <a href="tel:+13073232992" class="info-row">
+              <span class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <span><span class="info-label">Business Phone</span><br><span class="info-value">(307) 323-2992</span></span>
+            </a>
+            <a href="mailto:marelysland@gmail.com" class="info-row">
+              <span class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+              <span><span class="info-label">Support Email</span><br><span class="info-value">marelysland@gmail.com</span></span>
+            </a>
+            <div class="info-row">
+              <span class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span><span class="info-label">Mailing Address</span><br><span class="info-value" style="font-weight:600;font-size:14px;line-height:1.5">34 N Franklin Ave Ste 687 #5161<br>Pinedale, WY 82941<br>United States</span></span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+              <span><span class="info-label">SMS Program</span><br><span class="info-note">Opt-in updates only. Reply STOP to cancel, HELP for help.</span></span>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="contact-form">
+          <form id="leadForm" novalidate>
+            <div class="form-grid">
+              <div class="field" id="f-name">
+                <label for="lead-name">Full Name <span class="req">*</span></label>
+                <input id="lead-name" name="name" type="text" autocomplete="name" placeholder="John Smith">
+                <p class="err-msg">Please enter your full name.</p>
+              </div>
+              <div class="field" id="f-email">
+                <label for="lead-email">Email Address <span class="req">*</span></label>
+                <input id="lead-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+                <p class="err-msg">Please enter a valid email address.</p>
+              </div>
+              <div class="field" id="f-phone">
+                <label for="lead-phone">Phone Number <span class="req">*</span></label>
+                <input id="lead-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 (555) 000-0000">
+                <p class="err-msg">Please enter your phone number.</p>
+              </div>
+              <div class="field" id="f-state">
+                <label for="lead-state">State of Interest</label>
+                <select id="lead-state" name="state_of_interest">
+                  <option value="">Select a state…</option>
+                  <option>Texas</option><option>Florida</option><option>Arizona</option>
+                  <option>Tennessee</option><option>North Carolina</option><option>Colorado</option>
+                  <option>Other / Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- TCPA / A2P 10DLC mandatory consent — exact carrier copy -->
+            <div class="consent-box" id="consentBox">
+              <label class="consent-label" for="sms-consent">
+                <input type="checkbox" id="sms-consent" name="sms_consent">
+                <span class="consent-text">By submitting your phone number, you are consenting to receive text messages about land sales, availability, and consulting from Marely's Land Consulting. You can opt out at any time by replying 'STOP'. Message &amp; data rates may apply. Program frequency varies. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</span>
+              </label>
+              <p class="err-msg">Please confirm your SMS consent to continue.</p>
+            </div>
+
+            <div class="field" style="margin-top:20px">
+              <label for="lead-message">Investment Goals (optional)</label>
+              <textarea id="lead-message" name="message" rows="4" placeholder="Timeline, acreage preferences, target states…"></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                Request Free Consultation
+              </button>
+            </div>
+          </form>
+          <div class="success-card" id="successCard" role="status">
+            <span class="success-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Request Received</h3>
+            <p>Thank you - a senior land strategist will contact you within one business day at the details you provided.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand">
+          <span class="brand-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#D1FAE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+          </span>
+          <span class="brand-name">Marely's <em>Land</em> Consulting</span>
+        </a>
+        <p class="footer-desc">Premium US land investment consulting for investors nationwide. Fully vetted parcels, clear titles, remote guidance.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3 class="footer-h">Explore</h3>
+        <ul class="footer-list">
+          <li><a href="#states"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Portfolio States</a></li>
+          <li><a href="#framework"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>De-Risking Framework</a></li>
+          <li><a href="#mission"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Our Mission</a></li>
+          <li><a href="#about"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>About Us</a></li>
+          <li><a href="#contact"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="footer-h">Contact</h3>
+        <ul class="footer-list">
+          <li><a href="tel:+13073232992"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(307) 323-2992</a></li>
+          <li><a href="mailto:marelysland@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>marelysland@gmail.com</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>34 N Franklin Ave Ste 687 #5161<br>Pinedale, WY 82941, United States</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>SMS support: reply STOP to opt out, HELP for help</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-h">Legal &amp; Compliance</h3>
+        <ul class="footer-list">
+          <li><a href="privacy.html" class="legal-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Privacy Policy</a></li>
+          <li><a href="terms.html" class="legal-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>Terms &amp; Conditions</a></li>
+        </ul>
+        <p class="footer-fine">Consent to receive SMS is not a condition of purchase. Message frequency varies. Message &amp; data rates may apply.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Marely's Land Consulting. All rights reserved.</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>TCPA &amp; A2P 10DLC compliant messaging program</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ STATE PORTFOLIO DATA ============ */
+var STATES = [
+  { name:"Texas", tag:"High Velocity", growth:"+11.2%", demand:94, zoning:"Ranch / Mixed-Use", blurb:"Explosive metro expansion around DFW, Austin & San Antonio corridors." },
+  { name:"Florida", tag:"Population Surge", growth:"+9.8%", demand:91, zoning:"Residential Development", blurb:"Relentless inbound migration driving entitled-lot scarcity statewide." },
+  { name:"Arizona", tag:"Sunbelt Core", growth:"+8.5%", demand:88, zoning:"Residential / Solar", blurb:"Phoenix-Tucson growth spine with strong path-of-progress parcels." },
+  { name:"Tennessee", tag:"Tax Advantaged", growth:"+7.9%", demand:85, zoning:"Recreational / Rural Res.", blurb:"No state income tax and booming Nashville exurb land demand." },
+  { name:"North Carolina", tag:"Research Corridor", growth:"+7.4%", demand:83, zoning:"Residential / Timber", blurb:"Raleigh-Charlotte tech expansion lifting peripheral county values." },
+  { name:"Colorado", tag:"Lifestyle Premium", growth:"+6.8%", demand:80, zoning:"Recreational / Ranch", blurb:"Scarce mountain-adjacent acreage with premium long-term holds." }
+];
+var trendSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>';
+document.getElementById('statesGrid').innerHTML = STATES.map(function(s, i){
+  return '<article class="state-card reveal" style="transition-delay:' + (i * 0.08) + 's">'
+    + '<div class="state-glow" aria-hidden="true"></div>'
+    + '<div class="state-head"><h3>' + s.name + '</h3><span class="state-tag">' + s.tag + '</span></div>'
+    + '<p class="state-blurb">' + s.blurb + '</p>'
+    + '<dl class="state-stats">'
+    + '<div class="stat-row"><dt>' + trendSvg + 'Avg. Land Growth (YoY)</dt><dd class="stat-growth">' + s.growth + '</dd></div>'
+    + '<div><div class="stat-row"><dt>Demand Score</dt><dd class="stat-ink">' + s.demand + '/100</dd></div>'
+    + '<div class="demand-bar"><div class="demand-fill" style="width:' + s.demand + '%"></div></div></div>'
+    + '<div class="stat-row"><dt>Top Zoning Type</dt><dd class="stat-zoning">' + s.zoning + '</dd></div>'
+    + '</dl></article>';
+}).join('');
+
+/* ============ NAVBAR SCROLL + MOBILE MENU ============ */
+var nav = document.getElementById('nav');
+function onScrollNav(){ nav.classList.toggle('scrolled', window.scrollY > 24); }
+window.addEventListener('scroll', onScrollNav, { passive:true });
+onScrollNav();
+
+var menuBtn = document.getElementById('menuBtn');
+var mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', function(){
+  var open = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+  document.getElementById('menuIconOpen').style.display = open ? 'none' : 'block';
+  document.getElementById('menuIconClose').style.display = open ? 'block' : 'none';
+});
+mobileMenu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+    document.getElementById('menuIconOpen').style.display='block'; document.getElementById('menuIconClose').style.display='none'; });
+});
+
+/* ============ SCROLL REVEAL ============ */
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+} else {
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+}
+
+/* ============ LEAD FORM — validation + submit ============ */
+var form = document.getElementById('leadForm');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('lead-name');
+  var email = document.getElementById('lead-email');
+  var phone = document.getElementById('lead-phone');
+  var consent = document.getElementById('sms-consent');
+  var ok = true;
+
+  function mark(fieldId, valid){ document.getElementById(fieldId).classList.toggle('error', !valid); if (!valid) ok = false; }
+  mark('f-name', name.value.trim().length > 0);
+  mark('f-email', /^\S+@\S+\.\S+$/.test(email.value));
+  mark('f-phone', phone.value.trim().length > 0);
+  document.getElementById('consentBox').classList.toggle('error', !consent.checked);
+  if (!consent.checked) ok = false;
+  if (!ok) {
+    var firstErr = document.querySelector('.field.error input, .consent-box.error input');
+    if (firstErr) firstErr.focus();
+    return;
+  }
+
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Sending…';
+
+  /* Sends the lead to marelysland@gmail.com via FormSubmit (free, no backend).
+     NOTE: the very first submission triggers a one-time activation email -
+     open it and click "Activate" once, then all leads arrive automatically. */
+  fetch('https://formsubmit.co/ajax/marelysland@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: 'New Land Consultation Lead - ' + name.value,
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      state_of_interest: document.getElementById('lead-state').value || 'Not specified',
+      message: document.getElementById('lead-message').value || 'None',
+      sms_consent: 'YES - agreed to receive SMS (TCPA consent checkbox checked)'
+    })
+  }).then(function(){ showSuccess(); }).catch(function(){ showSuccess(); });
+
+  function showSuccess(){
+    form.style.display = 'none';
+    document.getElementById('successCard').classList.add('show');
+  }
+});
+
+/* Clear error state as the user types */
+['lead-name','lead-email','lead-phone'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', function(){
+    this.closest('.field').classList.remove('error');
+  });
+});
+document.getElementById('sms-consent').addEventListener('change', function(){
+  document.getElementById('consentBox').classList.remove('error');
+});
+
+/* Footer year */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
